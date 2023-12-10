@@ -2,4 +2,4 @@
 
 set -exuo pipefail
 
-docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
+docker run -p 80:80 -v $(pwd):/site --name blog --rm blog serve -H 0 -P 80 --force-polling -l
